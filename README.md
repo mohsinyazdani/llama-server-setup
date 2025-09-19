@@ -50,7 +50,12 @@ python main.py
 - `py main.py` (Windows, if using Python launcher)
 - `python main.py` (Windows, if Python is in PATH)
 
-3) Start the server using the generated script (`start.bat` on Windows or `./start.sh` on Linux/macOS).
+3) Start the server using the generated script:
+   - **Windows (PowerShell)**: `.\start.bat`
+   - **Windows (Command Prompt)**: `start.bat`
+   - **Linux/macOS**: `./start.sh`
+
+**Note**: In PowerShell, you must use `.\` prefix before `.bat` files due to execution policy. In Command Prompt, you can run `start.bat` directly.
 
 The auto-setup handles the server binary and dependencies automatically:
 - ✅ Auto-installs its own dependencies (requests)
@@ -328,6 +333,11 @@ Edit the generated startup script to modify:
 - **Python command not working**: Try `python3`, `py`, or `python` depending on your system setup
 - **Download fails**: Check internet connection, try running setup again (auto-resumes)
 - **Requests install fails**: Manually run `pip install requests` then retry setup
+
+### Windows-Specific Issues
+- **`.bat` file not running in PowerShell**: Use `.\start.bat` instead of `start.bat`
+- **`.bat` file not running in Command Prompt**: Use `start.bat` directly (no `.\` needed)
+- **Execution policy error**: Run PowerShell as Administrator and use `Set-ExecutionPolicy RemoteSigned`
 
 ### Server Problems  
 - **Model not found**: Download a GGUF model to `models/` folder
