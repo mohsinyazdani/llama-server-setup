@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  llama-server:
+    build: .
+    container_name: llama-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./models:/app/models
+    environment:
+      - MODEL_PATH=models/phi-4-mini-instruct-q4_k_m.gguf
+      - HOST=0.0.0.0
+      - PORT=8080
+      - CONTEXT_SIZE=4096
+      - THREADS=8
+      - GPU_LAYERS=0
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s

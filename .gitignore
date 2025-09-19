@@ -1,0 +1,58 @@
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+
+# Models and large files
+models/*.gguf
+models/*.bin
+models/*.pth
+models/*.safetensors
+
+# Binaries and DLLs
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Logs
+*.log
+
+# Docker
+*.tar
+/.venv/
+
+# Executables
+server
+server.exe
+llama-server*
+
+# Models (too large for git)
+models/*.gguf
+models/*.bin
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
