@@ -3,6 +3,8 @@
 Thumbs.db
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # Python
 __pycache__/
@@ -10,49 +12,34 @@ __pycache__/
 *.pyo
 *.pyd
 .python-version
+/.venv/
 
-# Models and large files
-models/*.gguf
-models/*.bin
-models/*.pth
-models/*.safetensors
+# Generated files (created by main.py)
+start.bat
+start.sh
+test_api.py
+server
+server.exe
+llama-server*
 
-# Binaries and DLLs
+# Binaries and DLLs (downloaded by setup)
 *.exe
 *.dll
 *.so
 *.dylib
+
+# Models (too large for git)
+models/*.gguf
+models/*.bin
+models/*.pth
+models/*.safetensors
 
 # Logs
 *.log
 
 # Docker
 *.tar
-/.venv/
 
-# Executables
-server
-server.exe
-llama-server*
-
-# Models (too large for git)
-models/*.gguf
-models/*.bin
-
-# Logs
-*.log
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Temporary files
+*.tmp
+*.temp
