@@ -45,6 +45,11 @@
 python main.py
 ```
 
+**Note**: Depending on your system setup, you may need to use:
+- `python3 main.py` (Linux/macOS, or if Python 3 is installed as python3)
+- `py main.py` (Windows, if using Python launcher)
+- `python main.py` (Windows, if Python is in PATH)
+
 3) Start the server using the generated script (`start.bat` on Windows or `./start.sh` on Linux/macOS).
 
 The auto-setup handles the server binary and dependencies automatically:
@@ -215,6 +220,11 @@ python test_api.py
 curl http://localhost:8080/health
 ```
 
+**Note**: Use the appropriate Python command for your system:
+- `python3 test_api.py` (Linux/macOS, or if Python 3 is installed as python3)
+- `py test_api.py` (Windows, if using Python launcher)
+- `python test_api.py` (Windows, if Python is in PATH)
+
 <details>
 <summary><strong>API Examples (expand)</strong></summary>
 
@@ -315,6 +325,7 @@ Edit the generated startup script to modify:
 
 ### Setup Problems
 - **Python not found**: Install Python 3.7+ from python.org, ensure "Add to PATH" is checked
+- **Python command not working**: Try `python3`, `py`, or `python` depending on your system setup
 - **Download fails**: Check internet connection, try running setup again (auto-resumes)
 - **Requests install fails**: Manually run `pip install requests` then retry setup
 
